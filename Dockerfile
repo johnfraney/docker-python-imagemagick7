@@ -21,6 +21,10 @@ ENV POETRY_NO_INTERACTION=1 \
 
 ENV PATH="/root/.local/bin:${PATH}"
 
-RUN python3 -m pip install pipx
+RUN python3 -m pip install --user pipx
 
-RUN pipx install poetry
+RUN pipx --global install poetry
+RUN pipx --global ensurepath
+
+RUN which poetry
+RUN poetry --version
