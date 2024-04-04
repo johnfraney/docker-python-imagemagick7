@@ -5,6 +5,8 @@
 
 A Docker image based on Python's Buster image that includes `pipx` and ImageMagick 7.
 
+Developed primarily to build [Blurry](https://github.com/blurry-dev/blurry) sites in GitHub actions using [`blurry-dev/actions-blurry-build`](https://github.com/blurry-dev/actions-blurry-build).
+
 ## Update
 
 ```bash
