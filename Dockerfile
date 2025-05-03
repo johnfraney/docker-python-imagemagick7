@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM python:3.12-bullseye
+FROM python:3.13-bullseye
 
 ENV DEBIAN_FRONTEND=noninteractive
 
