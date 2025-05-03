@@ -24,6 +24,7 @@ ENV PATH="/root/.local/bin:${PATH}"
 RUN python3 -m pip install --user pipx
 
 RUN pipx --global install poetry
+RUN pipx --global install uv
 RUN pipx --global ensurepath
 
 RUN which poetry
