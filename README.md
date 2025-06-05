@@ -10,7 +10,7 @@ Developed primarily to build [Blurry](https://github.com/blurry-dev/blurry) site
 ## Update
 
 ```bash
-docker build -t docker-python-imagemagick7 .
+docker build --platform linux/amd64 -t docker-python-imagemagick7 .
 docker tag docker-python-imagemagick7:latest johnfraney/docker-python-imagemagick7
 docker push johnfraney/docker-python-imagemagick7
 ```

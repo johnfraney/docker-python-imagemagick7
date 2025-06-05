@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM python:3.12-bullseye
+FROM python:3.13-bookworm
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -19,13 +19,6 @@ ENV POETRY_NO_INTERACTION=1 \
     POETRY_VIRTUALENVS_CREATE=1 \
     POETRY_CACHE_DIR=/tmp/poetry_cache
 
-ENV PATH="/root/.local/bin:${PATH}"
-
-RUN python3 -m pip install --user pipx
-
-RUN pipx --global install poetry
-RUN pipx --global install uv
-RUN pipx --global ensurepath
-
+RUN apt-get -qq install python3-poetry
 RUN which poetry
 RUN poetry --version
